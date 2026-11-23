@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { ReactP5Wrapper } from "@p5-wrapper/react";
 
 import "./App.css";
 

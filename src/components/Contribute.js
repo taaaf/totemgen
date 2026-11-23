@@ -12,6 +12,7 @@ const Contribute = () => {
           href="https://github.com/taaaf/Totemgen/"
           style={{ color: "#2B2A29" }}
           target="_blank"
+          rel="noreferrer"
         >
           GitHub page
         </a>
@@ -30,6 +31,7 @@ const Contribute = () => {
           href="https://www.instagram.com/form____plusmemories/"
           style={{ color: "#2B2A29" }}
           target="_blank"
+          rel="noreferrer"
         >
           IG page
         </a> {" "}
@@ -38,6 +40,7 @@ const Contribute = () => {
           href="https://github.com/taaaf/Totemgen/discussions"
           style={{ color: "#2B2A29" }}
           target="_blank"
+          rel="noreferrer"
         >
           Discussions page
         </a>.

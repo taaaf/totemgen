@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
 import logo from "../assets/logo.svg";
 import mit from "../assets/mit-license.png";
 import github from "../assets/github-mark.png";
@@ -51,6 +50,7 @@ const HomePage = () => {
             <a
               href="https://github.com/taaaf/TotemGen/tree/main"
               target="_blank"
+              rel="noreferrer"
             >
               <img src={github} className="images" alt="GitHub page" />
             </a>
@@ -60,6 +60,7 @@ const HomePage = () => {
             <a
               href="https://github.com/taaaf/TotemGen/blob/main/LICENSE"
               target="_blank"
+              rel="noreferrer"
             >
               <img src={mit} className="images" alt="MIT License" />
             </a>
@@ -69,6 +70,7 @@ const HomePage = () => {
             <a
               href="https://www.instagram.com/form____plusmemories/"
               target="_blank"
+              rel="noreferrer"
             >
               <img
                 src={formplusmemories}

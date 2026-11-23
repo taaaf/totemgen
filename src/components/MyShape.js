@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from "react";
+import { useEffect, useMemo } from "react";
 
 const MyShape = ({
   dropZoneInfo,
@@ -38,7 +38,8 @@ const MyShape = ({
     let angleRadians = 0;
 
     for (let rep = 0; rep < qualityRotation; rep++) {
-      dropZoneInfoValues.forEach((element, index) => {
+      for (let index = 0; index < dropZoneInfoValues.length; index++) {
+        const element = dropZoneInfoValues[index];
         if (index === 0) {
           for (let i = 0; i < table.length; i++) {
             valueX.push(Number(table[i][element] * xScale));
@@ -223,12 +224,6 @@ const MyShape = ({
                   //piece to go back to 0 height
 
                   if (i === 0) {
-                    const z = (valueZ + j + (-element + 0.5)) * zScale;
-                    const y = 0;
-                    const rotatedZ =
-                      Math.cos(angleRadians) * z - Math.sin(angleRadians) * y;
-                    const rotatedY =
-                      Math.sin(angleRadians) * z + Math.cos(angleRadians) * y;
                     const x = valueX[1];
 
                     const array = [0, 0, x];
@@ -256,12 +251,7 @@ const MyShape = ({
                   //piece to go back to 0 height
                   if (i === table.length - 1) {
                     const z = (valueZ + j + (-element + 0.5)) * zScale;
-                    const y = 0;
                     const x = valueX[i] + (valueX[i] - valueX[i - 1]);
-                    const rotatedZ =
-                      Math.cos(angleRadians) * z - Math.sin(angleRadians) * y;
-                    const rotatedY =
-                      Math.sin(angleRadians) * z + Math.cos(angleRadians) * y;
 
                     const valueYprev = -table[i][element] - offsetValue;
                     const rotatedYprev =
@@ -284,7 +274,7 @@ const MyShape = ({
             }
           } //end bars mode
         }
-      });
+      }
     }
 
     if (angle === 360 && switchMode === 0) {

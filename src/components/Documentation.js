@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import logo from "../assets/logo.svg";
 import res01 from "../assets/resources_01.jpg";
 import res02 from "../assets/resources_02.jpg";
-import res03 from "../assets/resources_03.jpg";
 import res04 from "../assets/resources_04.jpg";
 import res05 from "../assets/resources_05.jpg";
 import res06 from "../assets/resources_06.jpg";
@@ -90,7 +89,7 @@ const Resources = () => {
               <h1>ABOUT THE PROJECT</h1>
               <div className="row mt-3">
                 <div className="col-xl-5 py-2 px-3">
-                  <img src={logo} style={{ width: "100%", padding: "10%" }} />
+                  <img src={logo} alt="TotemGen logo" style={{ width: "100%", padding: "10%" }} />
                 </div>
 
                 <div className="col-xl-7 p-4">
@@ -104,6 +103,7 @@ const Resources = () => {
                       href="https://react.dev/"
                       style={{ color: "#2B2A29" }}
                       target="_blank"
+                      rel="noreferrer"
                     >
                       React
                     </a>
@@ -112,6 +112,7 @@ const Resources = () => {
                       href="https://github.com/P5-wrapper/react"
                       style={{ color: "#2B2A29" }}
                       target="_blank"
+                      rel="noreferrer"
                     >
                       ReactP5Wrapper
                     </a>{" "}
@@ -120,6 +121,7 @@ const Resources = () => {
                       href="https://getbootstrap.com/"
                       style={{ color: "#2B2A29" }}
                       target="_blank"
+                      rel="noreferrer"
                     >
                       Bootstrap
                     </a>
@@ -128,6 +130,7 @@ const Resources = () => {
                       href="https://www.redaction.us/"
                       style={{ color: "#2B2A29" }}
                       target="_blank"
+                      rel="noreferrer"
                     >
                       Redaction
                     </a>
@@ -142,6 +145,7 @@ const Resources = () => {
                       href="https://github.com/taaaf/TotemGen"
                       style={{ color: "#2B2A29" }}
                       target="_blank"
+                      rel="noreferrer"
                     >
                       Github page
                     </a>{" "}
@@ -150,6 +154,7 @@ const Resources = () => {
                       href="https://www.instagram.com/form____plusmemories/"
                       style={{ color: "#2B2A29" }}
                       target="_blank"
+                      rel="noreferrer"
                     >
                       Form +Memories
                     </a>
@@ -160,6 +165,7 @@ const Resources = () => {
                       href="https://github.com/taaaf/Totemgen/blob/main/LICENSE"
                       style={{ color: "#2B2A29" }}
                       target="_blank"
+                      rel="noreferrer"
                     >
                       MIT License
                     </a>
@@ -177,6 +183,7 @@ const Resources = () => {
                 <div className="col-xl-5 py-5 p-5">
                   <img
                     src={res01}
+                    alt="Uploading table data from the create page"
                     style={{ width: "100%", border: "1px solid #2B2A29" }}
                   />
                 </div>
@@ -197,6 +204,7 @@ const Resources = () => {
                 <div className="col-xl-5 p-5">
                   <img
                     src={res02}
+                    alt="Example of a compatible data table"
                     style={{ width: "100%", border: "1px solid #2B2A29" }}
                   />
                 </div>
@@ -213,6 +221,7 @@ const Resources = () => {
                 <div className="col-xl-5 p-5">
                   <img
                     src={res04}
+                    alt="Mapping table columns to the X and Y axes"
                     style={{ width: "100%", border: "1px solid #2B2A29" }}
                   />
                 </div>
@@ -233,6 +242,7 @@ const Resources = () => {
                 <div className="col-xl-5 p-5">
                   <img
                     src={res05}
+                    alt="Generated 3D shape with the modifier controls"
                     style={{ width: "100%", border: "1px solid #2B2A29" }}
                   />
                 </div>
@@ -248,6 +258,7 @@ const Resources = () => {
                 <div className="col-xl-5 p-5">
                   <img
                     src={res06}
+                    alt="Exporting the finished shape as an STL file"
                     style={{ width: "100%", border: "1px solid #2B2A29" }}
                   />
                 </div>
@@ -270,11 +281,13 @@ const Resources = () => {
                 <div className="col-xl-5 py-5 p-5">
                   <img
                     src={dataSculptureExample1}
+                    alt="Data sculpture example"
                     style={{ width: "100%", border: "1px solid #2B2A29" }}
                   />
 
                   <img
                     src={dataSculptureExample2}
+                    alt="Data sculpture example"
                     style={{
                       width: "100%",
                       border: "1px solid #2B2A29",
@@ -284,6 +297,7 @@ const Resources = () => {
 
                   <img
                     src={dataSculptureExample3}
+                    alt="Data sculpture example"
                     style={{ width: "100%", border: "1px solid #2B2A29" }}
                   />
                 </div>
@@ -295,6 +309,7 @@ const Resources = () => {
                       href="https://docs.google.com/spreadsheets/d/1QQA8T7UwnBClrBLdQPLHF_j7UFUASzgioxVUJui6j70/edit?usp=sharing"
                       style={{ color: "#2B2A29" }}
                       target="_blank"
+                      rel="noreferrer"
                     >
                       Click here
                     </a>{" "}
@@ -329,15 +344,21 @@ const Resources = () => {
                   <h4>
                     You can now use Totemgen to genereate the data sculpture.
                     Check out the{" "}
-                    <a
+                    <button
+                      type="button"
                       style={{
                         ...getStyle("tutorial"),
                         textDecoration: "underline",
+                        background: "none",
+                        border: "none",
+                        padding: 0,
+                        font: "inherit",
+                        cursor: "pointer",
                       }}
                       onClick={() => handleContentChange("tutorial")}
                     >
                       tutorial
-                    </a>{" "}
+                    </button>{" "}
                     if you need help.
                     <br />
                   </h4>
@@ -358,6 +379,7 @@ const Resources = () => {
                       href="https://drive.google.com/drive/folders/1fZ1Pa8w-FydmPdEQNzteUTOLyB9w97rA?usp=drive_link"
                       style={{ color: "#2B2A29" }}
                       target="_blank"
+                      rel="noreferrer"
                     >
                       Link to the Extras Folder
                     </a>{" "}
@@ -368,6 +390,7 @@ const Resources = () => {
                 <div className="col-xl-5 py-5 p-5">
                   <img
                     src={keychain}
+                    alt="3D printed keychain attachment"
                     style={{ width: "100%", border: "1px solid #2B2A29" }}
                   />
                 </div>
@@ -382,6 +405,7 @@ const Resources = () => {
                 <div className="col-xl-5 py-5 p-5">
                   <img
                     src={colab1}
+                    alt="Google Colab code that extracts messages containing keywords"
                     style={{ width: "100%", border: "1px solid #2B2A29" }}
                   />
                 </div>
@@ -398,6 +422,7 @@ const Resources = () => {
                 <div className="col-xl-5 py-5 p-5">
                   <img
                     src={colab2}
+                    alt="Google Colab code that converts an audio track into a table"
                     style={{ width: "100%", border: "1px solid #2B2A29" }}
                   />
                 </div>
@@ -418,6 +443,7 @@ const Resources = () => {
               <h1>Compila il modulo per registrarti!</h1>
 
               <iframe
+                title="Workshop registration form"
                 src="https://docs.google.com/forms/d/e/1FAIpQLSfG-jbH3gXXADpJVeH9tluV8-k0WqG5G2u-VnZULg8IKSKL3A/viewform?usp=sf_link"
                 width="100%"
                 height="520"

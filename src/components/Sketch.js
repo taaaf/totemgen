@@ -26,9 +26,6 @@ const sketch = (p) => {
   let camAngleX = 0;
   let camAngleY = 0;
 
-  let cameraX;
-  let cameraY;
-
   let exportStl;
   let shapeName = "MySculpture";
   let saveCanvas = false;
@@ -551,7 +548,6 @@ const Sketch = ({
   const [color, setColor] = useState("#FFFFFF");
 
   const [shapeName, setShapeName] = useState("");
-  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
   const [myShape, setMyShape] = useState([]);
   const [myShapeRows, setMyShapeRows] = useState();
@@ -602,10 +598,6 @@ const handleColorChange = useCallback((data) => {
 
   const handleShapeNameChange = (event) => {
     setShapeName(event.target.value);
-  };
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setIsFormSubmitted(true);
   };
 
   const [saveCanvas, setSaveCanvas] = useState(false);

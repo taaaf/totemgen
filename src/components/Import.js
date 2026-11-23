@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Import = ({ onFileSelect, onTextChange }) => {
-  const [file, setFile] = useState(null);
+  const [, setFile] = useState(null);
   const [text, setText] = useState("");
   const [tableString, setTableString] = useState([]);
 
